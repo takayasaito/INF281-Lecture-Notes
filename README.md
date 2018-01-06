@@ -1,6 +1,6 @@
 # INF281 Basics of bioinformatics sequence analysis
 
-It contains a PDF version of lecture notes of INF281.
+It contains a PDF version of the lecture notes for INF281 Basics of bioinformatics sequence analysis.
 
 ## Prerequisites
 
