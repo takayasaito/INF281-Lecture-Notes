@@ -1,0 +1,3 @@
+script:
+- mkdir _build
+- pdflatex -output-directory _build ./tex/lecture_notes.tex
