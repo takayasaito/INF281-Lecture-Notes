@@ -1,5 +1,7 @@
 # INF281 Basics of bioinformatics sequence analysis
 
+[![Build Status](https://travis-ci.org/takayasaito/INF281-Lecture-Notes.svg?branch=master)](https://travis-ci.org/takayasaito/INF281-Lecture-Notes)
+
 It contains a PDF version of the lecture notes for INF281 Basics of bioinformatics sequence analysis.
 
 ## Prerequisites
