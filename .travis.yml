@@ -5,5 +5,6 @@ before_install:
 script:
 - mkdir _build
 - cd ./tex
-- pdflatex -output-directory ../_build ./lecture_notes.tex
+- pdflatex -output-directory ../_build ./00_main.tex
+- mv ../_build/00_main.pdf ../_build/lecture_notes.pdf
 - cd ..
