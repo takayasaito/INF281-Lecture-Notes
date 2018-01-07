@@ -26,6 +26,10 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\makeatother
+
 %
 % PART I
 %
@@ -34,8 +38,10 @@ This work is licensed under a Creative Commons Attribution 4.0 International Lic
 %
 % Introduction
 %
+\setcounter{figure}{0}
 \section{Introduction}
 \input{01_Introduction_1.tex}
+\input{01_Introduction_2.tex}
 
 \end{document}
 
