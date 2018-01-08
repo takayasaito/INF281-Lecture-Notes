@@ -9,3 +9,14 @@ script:
 - mv ../_build/00_main.pdf ../_build/lecture_notes.pdf
 - pdflatex -output-directory ../_build ./01_Introduction.tex
 - cd ..
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "d1z/sxdi1WtAvF+cLgKrBPALAGvf54ViuFYd4khkhvTAY1cogx3k0EWvMPoi75Vaz+mTxHg5GVPwbvgLzovKzeiC4Y073b7x0QAavc3AzvNQJ/0sLEnspj36FOYJGpk0L/3IMm83eyb0drLySxdyQa2fK2A5q42SJ5nptt7cn4FDFl3AS9DQ08R/ZCRy84ECKzWUmabDjeSLjch8OYkpN2NFODkHpjPy+D0if7BMEALaQHN7176jC9EqibM73wIx4s6uB70nqc3YYX59Zo2WlFWs+jKYXtBZstaHItBs563mAYFIjrD6+OcGJh84dUFtgwjQz2lXCuX9szDPtsKtYKYQFhuEbkKCGmKENP78757PWMAYd5S3mkWTKfMAePjzHtfpaKMTwgUlHjiKZ6c7tdvrFf7Q5W4pJNV4UcZUiQ2zXw81JbX6zFX3xzybtDIlBwSS2dFGX3GmzNUswXIolG9VxczrWJm5MfKUyPK1f3Rslgr4yaAyj71jL08eZz00U4Rf7A6WxHPvRgUs8auGdRadyjg1g9QDRWCcpjjL9nB0gB9Si38il3LLX32QYSLra8OjY2r6w885cSWrxN3s+1LpI3kOLMd1+ytMEWrLqHcigmE1NORy8TzE/iyvzp4hnjF8E+P9NuhubQhwePHznfGqUdBzPlnuYvkA9IQAl2A="
+  file: ./_build/*.pdf
+  file_glob: true
+  skip_cleanup: true
+  on:
+    repo: takayasaito/INF281-Lecture-Notes
+    tags: true
