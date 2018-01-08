@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[font=small, labelfont=bf]{caption}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{8}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% PART II
+%
+\setcounter{part}{1}
+\part{}
+
+%
+% Global_pairwise_alignment
+%
+\setcounter{section}{1}
+\setcounter{figure}{0}
+\section{Global pairwise alignment}
+\input{02_Global_pairwise_alignment_01.tex}
+
+\end{document}
+
+

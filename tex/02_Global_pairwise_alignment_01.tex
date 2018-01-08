@@ -1,0 +1,92 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Pairwise alignment
+%
+\subsection{Pairwise alignment}
+A pairwise alignments is a basic sequence structure that consits of two sequences. A global alignment stretches to the whole part of two sequences, whereas a local alignment usually contains only part of the sequences.
+
+%
+% Pairwise alignment
+%
+\subsubsection*{Components of pairwise alignment}
+
+We name two sequences as ‘database’ or ‘d’ and ‘query’ or ‘q’ through this course. They may represent sequences from two different species or organisms.
+\\
+
+\noindent
+Identical sequences.
+\begin{verbatim}
+    q: ACGT
+    d: ACGT
+\end{verbatim}
+
+\noindent
+One mismatch.
+\begin{verbatim}
+    q: ACGT
+    d: ACGA
+\end{verbatim}
+
+\noindent
+The '-' symbol represents a blank. A single or a set of multile blanks further reprents a gap, which is an indication of insertion or deletion in the course of evoluation between two organisms.
+\begin{verbatim}
+    q: ACGT
+    d: A-GT
+\end{verbatim}
+
+\noindent
+\textbf{N.B.} A gap cannot be aligned with another gap.
+
+%
+% Example of a simple scoring scheme
+%
+\subsubsection*{Example of a simple scoring scheme}
+\begin{itemize}
+\item Match: 1
+\item Mismatch: 0
+\item Gap penalty: 1 (use -1 for the actual calculation)
+\end{itemize}
+
+\noindent
+We may use the following notation.
+\begin{itemize}
+\item $R_{ab}$ = 1 for a = b
+\item $R_{ab}$ = 0 for a $\neq$ b
+\item g = 1
+\end{itemize}
+
+%
+% NEW PAGE
+%
+\newpage 
+
+%
+% Exercise \thesection.1
+%
+\subsubsection*{Exercise \thesection.1}
+Use the simple scoring scheme above and calculate the scores of the following two alignments.
+
+\begin{multicols}{2}
+\begin{verbatim}
+Alignment 1
+    q: GCA-GCA
+    d: GA-TG-A	
+\end{verbatim}
+
+\begin{verbatim}
+Alignment 2 
+    q: GCA-GCA
+    d: GA-TG-A	
+\end{verbatim}
+\end{multicols}
+
+%\end{document}
