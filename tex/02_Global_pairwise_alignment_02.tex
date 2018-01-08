@@ -1,0 +1,123 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Alignment by brute-force
+%
+\subsection{Alignment by brute--force}
+A brute--force approach finds the alignment with the highest score by simply considering all possible alignments and calculates the score for each of them.
+
+%
+% An example of brute--force approach
+%
+\subsubsection*{An example of brute--force approach}
+We find the optimal alignment for the follwoing sequences by using the scoring scheme below.
+
+\begin{multicols}{2}
+Sequences:
+\begin{verbatim}
+    q: AG
+    d: ACG
+\end{verbatim}
+
+\noindent Scoring scheme: \\ $R_{ab}$ = 1 for a = b, $R_{ab}$ = 0 for a $\neq$ b, g = 1
+\end{multicols} 
+
+\noindent \textbf{1. The length of alignment}
+\begin{itemize}
+\item Maximum length: length(q) + length(d)
+\item Minimum length: max(length(q), length(d))
+\end{itemize}
+\medskip 
+
+\noindent \textbf{2. All possible alignments when length = 5}
+\begin{verbatim}
+    ---AG    A---G    A--G-    AG---    --A-G
+    ACG--    -ACG-    -AC-G    --ACG    AC-G-
+
+    --AG-    -AG--    -A--G    -A-G-    A-G--
+    AC--G    A--CG    A-CG-    A-C-G    -A-CG
+\end{verbatim}
+\medskip
+
+\noindent \textbf{3. All possible alignments when length = 4}
+\begin{verbatim}
+    A--G    A-G-    AG--    A--G    -A-G    -AG-
+    ACG-    AC-G    A-CG    -ACG    ACG-    AC-G
+
+    -AG-    A-G-    --AG    --AG    -A-G    AG--
+    A-CG    -ACG    ACG-    AC-G    A-CG    -ACG
+\end{verbatim}
+\medskip
+
+\noindent \textbf{4. All possible alignments when length = 3}
+\begin{verbatim}
+    -AG    A-G    AG-
+    ACG    ACG    ACG
+\end{verbatim}
+\medskip
+
+\noindent \textbf{5. Alignment with the best score}
+\begin{verbatim}
+    ACG
+    A-G	
+\end{verbatim}
+
+Score: 1
+
+%
+% Search space size of the brute-force approach
+%
+\subsubsection*{Search space size of the brute-force approach}
+The search space size is the number of all possible alignments. It is 25 (10 + 12 + 3) for the example above. \\
+
+\noindent \textbf{Rapid growth of search space size}
+
+\begin{multicols}{2}
+\begin{verbatim}
+Example 1
+    q: ACGACG
+    d: AGAG
+\end{verbatim}
+Search space size: 1289
+
+\begin{verbatim}
+Example 2
+    q: ACGACGACGACG
+    d: AGAGAGAG
+\end{verbatim}
+Search space size: 4,673,345
+
+\end{multicols}
+
+%
+% Exercise \thesection.2
+%
+\subsubsection*{Exercise \thesection.2}
+Find the alignment with the best score for the sequences.  Use the simple scoring scheme below.
+
+\begin{multicols}{2}
+Sequences:
+\begin{verbatim}
+    q: A
+    d: AC
+\end{verbatim}
+
+\noindent Scoring scheme: \\ $R_{ab}$ = 1 for a = b, $R_{ab}$ = 0 for a $\neq$ b, g = 1
+\end{multicols} 
+
+\begin{enumerate}
+\item What are the maximum and minimum lengths of the alignment?
+\item What is the search space size when the brute-force approach is used?
+\item Identify all possible alignments.
+\item What is the best score?
+\end{enumerate}
+
+%\end{document}
