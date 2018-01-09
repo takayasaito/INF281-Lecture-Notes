@@ -9,6 +9,7 @@ script:
 - pdflatex -output-directory ../_build ./00_main.tex
 - mv ../_build/00_main.pdf ../_build/lecture_notes.pdf
 - pdflatex -output-directory ../_build ./01_Introduction.tex
+- pdflatex -output-directory ../_build ./02_Global_pairwise_alignment.tex
 - cd ..
 
 deploy:
