@@ -18,7 +18,7 @@ Dynamic programming (DP) provides a solution for a multi-stage decision process,
 
 \subsubsection*{Memorize the best score in a table cell}
 
-The most basic step of DP procedures is updatig a cell with the hightet score from the three different scores calculated from its adjacent cells. DP ends when all the table cells are updated.
+For global alignment, the core procedure of DP is updating a cell with the highest score from the three different scores calculated from its adjacent cells. DP ends when the entire table is updated.
 
 \begin{figure}[H]
   \centering
@@ -33,7 +33,7 @@ $H_{i,j}$ represents the score of the cell for the current update. $H_{i-1,j}$, 
 
 \begin{multicols}{2}
 
-Cell $H_{i, j}$ and its adjcent cells
+Cell $H_{i, j}$ and its adjacent cells
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.3\textwidth]{fig02/dynamic_programmoing_cell_indices.png}
@@ -82,7 +82,7 @@ g = 1
 %
 \subsubsection*{Initialization}
 
-The first row and the first column can be calcuated independently from the adjcent cells.
+The first row and the first column can be calculated independently from the adjacent cells.
 \begin{align*}
 H_{0,j} &:  j * -1 * g \\
 H_{i,0} &: i * -1 * g
@@ -150,9 +150,9 @@ Table L
 \newpage
 
 %
-% Psedo-code of global alignment with DP
+% Pseudo-code of global alignment with DP
 %
-\subsubsection*{Psedo-code of updating DP table for global alignment}
+\subsubsection*{Pseudo-code of updating DP table for global alignment}
 
 \begin{algorithm}[H]
   \SetKwInOut{HAB}{$\mathrm{H_{i,j}}$}
@@ -163,7 +163,7 @@ Table L
   
   \BlankLine
     
-  \HAB{Dyanamic programming table}
+  \HAB{Dynamic programming table}
   \RAB{Match/mismatch scores}
   \G{Gap penalty}
   

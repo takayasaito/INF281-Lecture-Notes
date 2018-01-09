@@ -12,7 +12,7 @@
 % Alignment by brute-force
 %
 \subsection{Table representation of alignment}
-Several data strcutres can be used to repesent an alignment. The table representation is frequently used and also makes the process clear when we combine it with dynamic programming (DP) later.
+Several data structures can be used to represent an alignment. The table representation is frequently used and also makes the process clear when we combine it with dynamic programming (DP) later.
 
 \subsubsection*{Data structures and algorithms}
 It is important to consider the following aspects before solving computational problems.
@@ -35,7 +35,7 @@ Alignment:
 \noindent \textbf{1. Initial setup}
 
 \begin{enumerate}
-\item Make a table with the size of (1 + length(q)) by (1 + length(b))
+\item Make a table with the size of (1 + length(q)) by (1 + length(d))
 \item Add the database sequence as column labels
 \item And the query sequence as row labels
 \end{enumerate}
@@ -54,7 +54,7 @@ We use three types of arrows to form an alignment.
 \item Move horizontally: add the letter from ‘q’ and ‘-’ to the alignment
 \end{itemize}
 
-It shoud start from S and stops at E.
+It should start from S and stops at E.
 
 \begin{figure}[H]
   \centering
