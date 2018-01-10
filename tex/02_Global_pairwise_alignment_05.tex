@@ -94,7 +94,7 @@ H_{i,j}^{(2)} &= 1 + 0 = 1 \neq H_{i,j} &\hfill  & (diagonal)
 % Common mistake with backtracking
 %
 \subsubsection*{Common mistake with backtracking}
-For the re-calulation approach, it is not to find $max(H_{i-1,j}, H_{i,j-1}, H_{i-1,j-1})$. You must re-calulate the candidates and then $max(H_{i,j}^{(0)}, H_{i,j}^{(1)} , H_{i,j}^{(2)})$ to find the actual direction.
+For the re-calculation approach, it is not to find $max(H_{i-1,j}, H_{i,j-1}, H_{i-1,j-1})$. You must re-calculate the candidates and then $max(H_{i,j}^{(0)}, H_{i,j}^{(1)} , H_{i,j}^{(2)})$ to find the actual direction.
 
 %
 % Implementation with recursive call
@@ -129,7 +129,7 @@ Recursive calls are usually used to implement DP backtracking.
   
   \SQ{Sequence q}
   \SD{Sequence d}     
-  \HAB{Dyanamic programming table}
+  \HAB{Dynamic programming table}
   \RAB{Match/mismatch scores}
   \G{Gap penalty}
 
@@ -141,8 +141,8 @@ Recursive calls are usually used to implement DP backtracking.
     
     \I{Index of sequence q}
     \J{Index of sequence d}
-    \AQ{q part of alignement (stored in reverse order)}
-    \AD{d part of alignement (stored in reverse order)}
+    \AQ{q part of alignment (stored in reverse order)}
+    \AD{d part of alignment (stored in reverse order)}
     \K{Index for \dAQ and \dAD}
   
     \BlankLine
