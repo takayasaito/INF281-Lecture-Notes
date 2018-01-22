@@ -1,0 +1,195 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Introduction of score matrix
+%
+\subsection{Introduction of score matrix}
+We will expand our simple scoring scheme to score matrices. This expansion allows us to solve general alignment problems with DNA, RNA, and protein sequences. 
+
+%
+% Extension of a scoring scheme to a score matrix
+%
+\subsubsection*{Extension of a scoring scheme to a score matrix}
+The matrix below is equivalent with match: 1 and mismatch: 0. 
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.175\textwidth]{fig03/simple_score_matrix.png}
+\end{figure}
+
+\noindent
+\textbf{Example of a DNA score matrix}
+
+\noindent
+The matrix below is equivalent with match: 5 and mismatch: -4. 
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/dna_matrix_exercise.png}
+\end{figure}
+
+%
+% Applications of score matrix
+%
+\subsubsection*{Applications of score matrix}
+
+Score matrices are more flexible than the simple scoring scheme. For instance, they can be used for the following cases.
+
+\begin{itemize}
+\item DNA pairs
+\item RNA pairs
+\item Similarity of protein sequences by amino acid properties
+\end{itemize}
+
+%
+% DNA pairs (Watson-Crick pairs)
+%
+\subsubsection*{DNA pairs (Watson-Crick pairs)}
+A thymine pairs with an adenine, and a cytosine pairs with a guanine.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.4\textwidth]{fig03/dna_watson_crick_pair.png}
+  \caption{Watson-Crick pairs (source: \href{https://commons.wikimedia.org/w/index.php?curid=15027555}{Zephyris, Wikimedia Commons})}
+\end{figure}
+
+%
+% NEWPAGE
+%
+\newpage
+
+\noindent \textbf{Example of score matrix for DNA pairs} \\
+\noindent The matrix reflects the difference of hydrogen bonds.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/example_dna_score_matrix.png}
+\end{figure}
+
+\noindent \textbf{Example of DP for DNA pairs} \\
+\noindent You can use DP to find a DNA alignment with Watson-Crick pairs. For instance, the DP table below is used to solve the optimal alignment for two DNA sequences: q = AC and d = GT with gap penalty g = 4.
+
+\begin{multicols}{2}
+DP table:
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.25\textwidth]{fig03/example_watson_crick_alignment.png}
+\end{figure}
+
+Alignment:
+\begin{verbatim}
+    q: AC-
+    d: -GT
+\end{verbatim}
+
+\end{multicols} 
+
+%
+% RNA pairs (Watson-Crick pairs)
+%
+\subsubsection*{RNA pairs}
+A single stand of RNA can form a 3D structure that has a biological function. The secondary structure of RNA is a two-dimensional representation of the structure. 
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/rna_stem_loop.png}
+  \caption{RNA stem-loop (source: \href{https://commons.wikimedia.org/w/index.php?curid=815268}{Sakurambo, Wikimedia Commons})}
+\end{figure}
+
+\noindent \textbf{Wobble pairs} \\
+\noindent Wobble pairs are not canonical Watson-Crick pairs, but they can still form hydrogen bonds.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/rna_gu_wobble.png}
+  \caption{GU wobble pairs \newline (modifed from the original version by \href{https://commons.wikimedia.org/w/index.php?curid=2636730}{Fdardel, Wikimedia Commons})}
+\end{figure}
+
+\noindent \textbf{Example of DP for RNA pairs} \\
+\noindent You can form the following DP table for two RNA sequences: q = AU and d = UGA with gap penalty g = 9.
+\begin{multicols}{2}
+DP table:
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.25\textwidth]{fig03/example_rna_alignment.png}
+\end{figure}
+
+Alignment:
+\begin{verbatim}
+    q: A-U
+    d: UGA
+\end{verbatim}
+
+\end{multicols} 
+
+%
+% Similarity of protein sequences
+%
+\subsubsection*{Similarity of protein sequences}
+Amino acids can be categorized into several groups by their properties. Proteins alignments often need to take these properties into consideration.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/amino_acid_properties.png}
+  \caption{Venn diagram of amino acid properties }
+\end{figure}
+
+\noindent
+\textbf{Example of a protein score matrix}\\
+It can be used to compare the similarity between two protein sequences.
+
+\begin{table}[!ht]
+\footnotesize
+\centering
+
+\label{my-label}
+\begin{tabular}{lllllllllllllllllllll}
+   & \textbf{A }  & \textbf{R}   & \textbf{N}   & \textbf{D }  & \textbf{C}   & \textbf{Q}   & \textbf{E}   & \textbf{G}   & \textbf{H }  & \textbf{I}   & \textbf{L}   & \textbf{K}   & \textbf{M}   & \textbf{F}   & \textbf{P}   & \textbf{S}   & \textbf{T}   & \textbf{W}   & \textbf{Y}   & \textbf{V}   \\
+\textbf{A} & 13  & 6   & 9   & 9   & 5   & 8   & 9   & 12  & 6   & 8   & 6   & 7   & 7   & 4   & 11  & 11  & 11  & 2   & 4   & 9   \\
+\textbf{R} & 3   & 17  & 4   & 3   & 2   & 5   & 3   & 2   & 6   & 3   & 2   & 9   & 4   & 1   & 4   & 4   & 3   & 7   & 2   & 2   \\
+\textbf{N} & 4   & 4   & 6   & 7   & 2   & 5   & 6   & 4   & 6   & 3   & 2   & 5   & 3   & 2   & 4   & 5   & 4   & 2   & 3   & 3   \\
+\textbf{D} & 5   & 4   & 8   & 11  & 1   & 7   & 10  & 5   & 6   & 3   & 2   & 5   & 3   & 1   & 4   & 5   & 5   & 1   & 2   & 3   \\
+\textbf{C} & 2   & 1   & 1   & 1   & 52  & 1   & 1   & 2   & 2   & 2   & 1   & 1   & 1   & 1   & 2   & 3   & 2   & 1   & 4   & 2   \\
+\textbf{Q} & 3   & 5   & 5   & 6   & 1   & 10  & 7   & 3   & 7   & 2   & 3   & 5   & 3   & 1   & 4   & 3   & 3   & 1   & 2   & 3   \\
+\textbf{E }& 5   & 4   & 7   & 11  & 1   & 9   & 12  & 5   & 6   & 3   & 2   & 5   & 3   & 1   & 4   & 5   & 5   & 1   & 2   & 3   \\
+\textbf{G} & 12  & 5   & 10  & 10  & 4   & 7   & 9   & 27  & 5   & 5   & 4   & 6   & 5   & 3   & 8   & 11  & 9   & 2   & 3   & 7   \\
+\textbf{H} & 2   & 5   & 5   & 4   & 2   & 7   & 4   & 2   & 15  & 2   & 2   & 3   & 2   & 2   & 3   & 3   & 2   & 2   & 3   & 2   \\
+\textbf{I }& 3   & 2   & 2   & 2   & 2   & 2   & 2   & 2   & 2   & 10  & 6   & 2   & 6   & 5   & 2   & 3   & 4   & 1   & 3   & 9   \\
+\textbf{L} & 6   & 4   & 4   & 3   & 2   & 6   & 4   & 3   & 5   & 15  & 34  & 4   & 20  & 13  & 5   & 4   & 6   & 6   & 7   & 13  \\
+\textbf{K} & 6   & 18  & 10  & 8   & 2   & 10  & 8   & 5   & 8   & 5   & 4   & 24  & 9   & 2   & 6   & 8   & 8   & 4   & 3   & 5   \\
+\textbf{M} & 1   & 1   & 1   & 1   & 0   & 1   & 1   & 1   & 1   & 2   & 3   & 2   & 6   & 2   & 1   & 1   & 1   & 1   & 1   & 2   \\
+\textbf{F} & 2   & 1   & 2   & 1   & 1   & 1   & 1   & 1   & 3   & 5   & 6   & 1   & 4   & 32  & 1   & 2   & 2   & 4   & 20  & 3   \\
+\textbf{P} & 7   & 5   & 5   & 4   & 3   & 5   & 4   & 5   & 5   & 3   & 3   & 4   & 3   & 2   & 20  & 6   & 5   & 1   & 2   & 4   \\
+\textbf{S} & 9   & 6   & 8   & 7   & 7   & 6   & 7   & 9   & 6   & 5   & 4   & 7   & 5   & 3   & 9   & 10  & 9   & 4   & 4   & 6   \\
+\textbf{T} & 8   & 5   & 6   & 6   & 4   & 5   & 5   & 6   & 4   & 6   & 4   & 6   & 5   & 3   & 6   & 8   & 11  & 2   & 3   & 6   \\
+\textbf{W} & 0   & 2   & 0   & 0   & 0   & 0   & 0   & 0   & 1   & 0   & 1   & 0   & 0   & 1   & 0   & 1   & 0   & 55  & 1   & 0   \\
+\textbf{Y} & 1   & 1   & 2   & 1   & 3   & 1   & 1   & 1   & 3   & 2   & 2   & 1   & 2   & 15  & 1   & 2   & 2   & 3   & 31  & 2   \\
+\textbf{V} & 7   & 4   & 4   & 4   & 4   & 4   & 4   & 4   & 5   & 4   & 15  & 10  & 4   & 10  & 5   & 5   & 5   & 72  & 4   & 17 
+\end{tabular}
+\caption{Mutation probability matrix for the evolutionary distance of 250 PAMs (in percentage) (Chapter 22: A model of evolutionary change in proteins, Dayhoff and Schwartz, Atlas of Protein Sequence and Structure, 1978)}
+\end{table}
+
+%
+% Exercise \thesection.1
+%
+\subsubsection*{Exercise \thesection.1}
+\begin{enumerate}
+\item Use the DNA score matrix below with g = 10 and find the optimal alignment for q = TG and d = TCG.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.25\textwidth]{fig03/dna_matrix_exercise.png}
+\end{figure}
+
+\item The 250 PAM mutation matrix above can not directly be used for global alignments. Explain what kind of matrix you need for calcualting alignment scores.
+\end{enumerate}
+
+%\end{document}
