@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[font=small, labelfont=bf]{caption}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\clearpage\maketitle
+\vspace{450px}
+\includegraphics[scale=1]{fig00/88x31.png} \\
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+\thispagestyle{empty}
+\pagebreak
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+\pagebreak
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% PART I
+%
+\part{}
+
+%
+% Introduction
+%
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Introduction}
+\input{01_Introduction_1.tex}
+\input{01_Introduction_2.tex}
+\input{01_Introduction_3.tex}
+
+\newpage
+
+%
+% PART II
+%
+\part{}
+
+%
+% Global_pairwise_alignment
+%
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Global pairwise alignment}
+\input{02_Global_pairwise_alignment_01.tex}
+\input{02_Global_pairwise_alignment_02.tex}
+\input{02_Global_pairwise_alignment_03.tex}
+\input{02_Global_pairwise_alignment_04.tex}
+\input{02_Global_pairwise_alignment_05.tex}
+\input{02_Global_pairwise_alignment_06.tex}
+
+\newpage
+
+%
+% Extension_of_global_alignment
+%
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Extension of global alignment}
+\input{03_Extension_of_global_alignment_01.tex}
+\newpage
+\input{03_Extension_of_global_alignment_02.tex}
+\input{03_Extension_of_global_alignment_03.tex}
+\input{03_Extension_of_global_alignment_04.tex}
+\input{03_Extension_of_global_alignment_05.tex}
+
+\end{document}
+
+

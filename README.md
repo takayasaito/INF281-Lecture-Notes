@@ -1,8 +1,10 @@
-# INF281 Basics of Bioinformatics Sequence Analysis
+# Lecture Notes for INF281 Basics of Bioinformatics Sequence Analysis
 
 [![Build Status](https://travis-ci.org/takayasaito/INF281-Lecture-Notes.svg?branch=master)](https://travis-ci.org/takayasaito/INF281-Lecture-Notes)
 
-It uses Travis CI to automatically generate PDF files of the lecture notes for INF281 Basics of bioinformatics sequence analysis from Tex source files. The generated PDFs are available on the [Release page](https://github.com/takayasaito/INF281-Lecture-Notes/releases).
+This repository contains the sources files of the lecture notes for INF281 Basics of bioinformatics sequence analysis. The generated PDFs are available on the [Release page](https://github.com/takayasaito/INF281-Lecture-Notes/releases).
+
+INF281 Exercises and Solutions are availabe [here](https://github.com/takayasaito/INF281-Exercises).
 
 ## Course description
 ### Prerequisites

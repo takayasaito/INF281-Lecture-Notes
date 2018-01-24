@@ -1,0 +1,113 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Extension of gap penalties
+%
+\subsection{Extension of gap penalties}
+
+%
+% Types of gap penalties
+%
+\subsubsection*{Types of gap penalties}
+Three types of gap penalties can be considered when creating an alignment. They treat a gap penalty differently depending on the gap length.
+
+\begin{itemize}
+\item Linear
+\item Affine
+\item Constant
+\end{itemize}
+
+%
+% Gap penalty notation
+%
+\subsubsection*{Gap penalty notation}
+\begin{itemize}
+\item $g$: single gap penalty
+\item $l$: length of a gap
+\item $g_l$: gap penalty of length l
+\item $g_{open}$: initial gap penalty
+\item $g_{extend}$: extended gap penalty
+\end{itemize}
+
+%
+% Linear gap penalty
+%
+\subsubsection*{Linear gap penalty}
+It is the same as our simple scoring scheme. It treats a gap with multiple blanks as a result of several mutations. A gap of length $l$ can be calculated as: $g_l = g * l$.
+\medskip 
+
+\noindent
+\textbf{Example of a gap of length 2}
+\begin{verbatim}
+    q: ACCCGT
+    d: AC--GT
+\end{verbatim}
+The score of the gap (only the gap part) is 10 when $g$ = 5. 
+
+%
+% Affine gap penalty
+%
+\subsubsection*{Affine gap penalty}
+It treats a gap with multiple blanks as a result of a single mutation. A gap with length $l$ can be calculated as: $g_l = g_{open} + (l – 1) * g_{extend}$.
+\medskip 
+
+\noindent
+\textbf{Example of a gap of length 2}
+\begin{verbatim}
+    q: ACCCGT
+    d: AC--GT
+\end{verbatim}
+The score of the gap (only the gap part) is 5.5 when $g_{open}$ and $g_{extend}$ are 5 and 0.5 respectively. 
+
+%
+% Constant gap penalty
+%
+\subsubsection*{Constant gap penalty}
+It is similar to the affine gap penalty, but the score is independent form the gap length. A gap with length l can be calculated as: $g_l = g$ 
+\medskip 
+
+\noindent
+\textbf{Example of a gap of length 2}
+\begin{verbatim}
+    q: ACCCGT
+    d: AC--GT
+\end{verbatim}
+The score of the gap (only the gap part) for the alignment above is 5 when $g$ = 5. 
+
+%
+% Exercise \thesection.2
+%
+\subsubsection*{Exercise \thesection.2}
+Calculate all three types of gap penalties for the gap in alignment 1 \& 2.
+
+\begin{itemize}
+\item $g$: 5
+\item $g_{open}$: 5
+\item $g_{extend}$: 0.5
+\end{itemize}
+
+\begin{multicols}{2}
+\begin{verbatim}
+Alignment 1
+    q: CCCGG 
+    d: CC-CG
+\end{verbatim}
+
+\begin{verbatim}
+Alignment 2 
+    q: CCCGG
+    d: C---G
+\end{verbatim}
+\end{multicols}
+
+\bigskip 
+
+%\end{document}
