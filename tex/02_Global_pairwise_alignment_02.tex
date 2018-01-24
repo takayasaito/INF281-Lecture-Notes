@@ -23,16 +23,15 @@ We find the optimal alignment for the following sequences by using the scoring s
 \begin{multicols}{2}
 Sequences:
 \begin{verbatim}
-    q: AG
-    d: ACG
+    q: AG, d: ACG
 \end{verbatim}
 \vfill\null
 \columnbreak
 
 \noindent Scoring scheme: \\ 
-$R_{ab}$ = 1 for a = b \\ 
-$R_{ab}$ = 0 for a $\neq$ b \\ 
-g = 1
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1
 
 \end{multicols} 
 
@@ -89,15 +88,13 @@ The search space size is the number of all possible alignments. It is 25 (10 + 1
 \begin{multicols}{2}
 \begin{verbatim}
 Example 1
-    q: ACGACG
-    d: AGAG
+    q: ACGACG, d: AGAG
 \end{verbatim}
 Search space size: 1289
 
 \begin{verbatim}
 Example 2
-    q: ACGACGACGACG
-    d: AGAGAGAG
+    q: ACGACGACGACG, d: AGAGAGAG
 \end{verbatim}
 Search space size: 4,673,345
 
@@ -112,24 +109,23 @@ Find the alignment with the best score for the sequences.  Use the simple scorin
 \begin{multicols}{2}
 Sequences:
 \begin{verbatim}
-    q: A
-    d: AC
+    q: A, d: AC
 \end{verbatim}
 \vfill\null
 \columnbreak
 
 \noindent Scoring scheme: \\ 
-$R_{ab}$ = 1 for a = b \\ 
-$R_{ab}$ = 0 for a $\neq$ b \\ 
-g = 1
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1
 
 \end{multicols} 
 
 \begin{enumerate}
 \item What are the maximum and minimum lengths of the alignment?
-\item What is the search space size when the brute-force approach is used?
 \item Identify all possible alignments.
 \item What is the best score?
+\item What is the search space size when the brute-force approach is used?
 \end{enumerate}
 
 %\end{document}
