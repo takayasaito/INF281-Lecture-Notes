@@ -61,17 +61,12 @@ A thymine pairs with an adenine, and a cytosine pairs with a guanine.
   \caption{Watson-Crick pairs (source: \href{https://commons.wikimedia.org/w/index.php?curid=15027555}{Zephyris, Wikimedia Commons})}
 \end{figure}
 
-%
-% NEWPAGE
-%
-\newpage
-
 \noindent \textbf{Example of score matrix for DNA pairs} \\
-\noindent The matrix reflects the difference of hydrogen bonds.
+\noindent The matrix reflects the differences of hydrogen bonds.
 
 \begin{figure}[H]
   \centering
-      \includegraphics[width=0.3\textwidth]{fig03/example_dna_score_matrix.png}
+      \includegraphics[width=0.3\textwidth]{fig03/example_watson_crick_score_matrix.png}
 \end{figure}
 
 \noindent \textbf{Example of DP for DNA pairs} \\
@@ -111,6 +106,14 @@ A single stand of RNA can form a 3D structure that has a biological function. Th
   \centering
       \includegraphics[width=0.3\textwidth]{fig03/rna_gu_wobble.png}
   \caption{GU wobble pairs \newline (modified  from the original version by \href{https://commons.wikimedia.org/w/index.php?curid=2636730}{Fdardel, Wikimedia Commons})}
+\end{figure}
+
+\noindent \textbf{Example of score matrix for RNA pairs} \\
+\noindent The matrix takes GU wobbles into consideration.
+
+\begin{figure}[H]
+  \centering
+      \includegraphics[width=0.3\textwidth]{fig03/example_rna_score_matrix.png}
 \end{figure}
 
 \noindent \textbf{Example of DP for RNA pairs} \\
