@@ -1,0 +1,67 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Search in sequence databases
+%
+\subsection{Search in sequence databases}
+Since biological databases contain a large number of sequences, heuristics search methods are usually applied to database search.
+
+%
+% Aims of database search
+%
+\subsubsection*{Aims of searching in sequence databases} 
+\begin{itemize}
+\item Find homologies 
+\item Find segments with important functionality
+\end{itemize}
+
+%
+% Main procedures of sequence search
+%
+\subsubsection*{Main procedures of sequence search} 
+\begin{itemize}
+\item Perform local pairwise alignments
+\item Evaluate the alignments statistically
+\end{itemize}
+
+%
+% Estimated computational time for dynamic programming (DP)
+%
+\subsubsection*{Estimated computational time for dynamic programming (DP)} 
+\begin{table}[h]
+\centering
+\caption{Estimated computational time of DP for the three cases 1ms, 10ms, and 1sec}
+\begin{tabular}{|l|lll|}
+\hline
+\multirow{2}{*}{\textbf{Time of one alignment}} & \multicolumn{3}{c|}{\textbf{Database size}}                 \\ \cline{2-4} 
+                                                & \textbf{1000} & \textbf{1,000,000} & \textbf{1,000,000,000} \\ \hline
+\textbf{1 ms}                                   & 1 sec         & 16 min             & 2.6 h                  \\ 
+\textbf{10 ms}                                  & 10 sec        & 2.6 h              & 11 days                \\ 
+\textbf{1 sec}                                  & 16 min        & 11 days            & 31 years               \\ \hline
+\end{tabular}
+\end{table}
+
+%
+% Heuristic approach
+%
+\subsubsection*{Heuristic approach} 
+\begin{itemize}
+\item Need to search billions of entries
+\item Tradeoff between accuracy/precision and speed
+\item Use n-gram based search
+\item BLAST (Basic Local Alignment Search Tool)
+\item BLAT (BLAST-like alignment tool)
+\end{itemize}
+
+\bigskip 
+
+%\end{document}
