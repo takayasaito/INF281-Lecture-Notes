@@ -1,0 +1,78 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document} 
+
+%
+% N-gram based search
+%
+\subsection{N-gram based search}
+Using n-grams is a useful method to find segment pairs.
+
+%
+% Equivalent or related concepts to n-gram
+%
+\subsubsection*{Equivalent or related concepts to n-gram} 
+\begin{itemize}
+\item q-gram
+\item n-letter word
+\item n-tuple
+\item n-mer
+\end{itemize}
+
+%
+% Create n-grams
+%
+\subsubsection*{Create n-grams} 
+Decomposing a given sequence into n-letter words creates a list of n-grams.
+
+\medskip 
+
+\noindent
+\textbf{Example}
+
+\begin{verbatim}
+    q: ACGATT 
+    
+    Word size: 2
+        AC, CG, GA, AT, TT
+        
+    Word size: 3    
+        ACG, CGA, GAT, ATT
+        
+\end{verbatim}
+
+%
+% Find segment pairs in database sequences
+%
+\subsubsection*{Find segment pairs in database sequences} 
+N-grams can be used to find segment pairs.
+
+\medskip
+
+\noindent
+\textbf{Example}
+
+\begin{verbatim}
+    q: ACGATT 
+    2-gram: AC, CG, GA, AT, TT
+    
+    d1: CTAAG
+    0 hit
+
+    d2: CGTAT
+    2 hits
+
+    d3: ATAGA
+    2 hits
+\end{verbatim}
+
+\bigskip 
+
+%\end{document}
