@@ -12,6 +12,7 @@ script:
 - pdflatex -output-directory ../_build ./02_Global_pairwise_alignment.tex
 - pdflatex -output-directory ../_build ./03_Extension_of_global_alignment.tex
 - pdflatex -output-directory ../_build ./04_Local_alignment.tex
+- pdflatex -output-directory ../_build ./05_Database_search.tex
 - cd ..
 
 deploy:
