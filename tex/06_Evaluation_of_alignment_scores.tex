@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{46}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Evaluation of alignment scores
+%
+\setcounter{section}{5}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Evaluation of alignment scores}
+\input{06_Evaluation_of_alignment_scores_01.tex}
+\input{06_Evaluation_of_alignment_scores_02.tex}
+\input{06_Evaluation_of_alignment_scores_03.tex}
+\input{06_Evaluation_of_alignment_scores_04.tex}
+
+\end{document}
