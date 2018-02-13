@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{54}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Model evaluation
+%
+\setcounter{section}{7}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Model evaluation}
+\input{07_Model_evaluation_01.tex}
+\input{07_Model_evaluation_02.tex}
+\newpage
+\input{07_Model_evaluation_03.tex}
+\input{07_Model_evaluation_04.tex}
+
+\end{document}
