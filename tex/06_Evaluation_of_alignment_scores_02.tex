@@ -5,7 +5,9 @@
 %\usepackage{float}
 %\usepackage{multicol}
 %\usepackage{multirow}
+%\usepackage{amsmath}
 %\usepackage[font=small, labelfont=bf]{caption}
+%\usepackage[table,xcdraw]{xcolor}
 %
 %\begin{document}
 
@@ -146,6 +148,48 @@ Assume that the scores are pre-calculated for the alignments of the query sequen
 
 
 \end{enumerate}
+
+%
+% Using the normal distribution
+%
+\subsubsection*{Using the normal distribution}
+The underlying distribution of global alignment scores is unknown, but the z-score is sometimes calculated. \\
+
+\noindent
+The z-score is: \\
+
+$z = \dfrac{x-\mu}{\sigma}$ \\
+
+\noindent
+where: \\
+
+$\mu$ is the mean of the population. \\
+
+$\sigma$ is the standard deviation of the population.
+
+%
+% Mean and variacne
+%
+\subsubsection*{Mean and variance}
+The sample mean ($\bar{x}$) and the sample variance ($s^2$) are calculated as follows. \\
+
+$\bar{x} =\dfrac{1}{n} \sum_{i=1}^{n}x_{i}$ \\ \\
+
+$s = \sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-\bar{x})^2}{n-1}}$
+
+%
+% Example of z-score
+%
+\subsubsection*{Example of z-score}
+
+\begin{itemize}
+\item $\bar{x}$: 2.78	
+\item $s$: 1.4964
+\end{itemize}
+
+$z = \dfrac{4.5-2.78}{1.4964} = 1.1494$ \\
+
+The p-value is 0.125196.
 
 \bigskip 
 
