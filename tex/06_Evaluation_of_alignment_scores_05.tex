@@ -23,7 +23,7 @@ BLAST reports bit-scores and e-values that can be used for evaluation on search 
 \subsubsection*{Bit score} 
 Bit scores are normalized scores that have the same unit (bit). The scores can be comparable even when different scoring schemes are used. \\
 
-$S' = \dfrac{(\lambda S - ln⁡K)}{ln⁡2}$ \\
+$S' = \dfrac{(\lambda S - \ln K)}{\ln⁡ 2}$ \\
 
 \noindent
 $2^{S'}$ is the estimated number of alignments, and at least one alignment among them is estimated to have score S.
@@ -38,7 +38,7 @@ $2^{S'}$ is the estimated number of alignments, and at least one alignment among
 \item Score: 88
 \end{itemize}
 
-$S' = \dfrac{(\lambda S - ln⁡K)}{ln⁡2} = \dfrac{(0.267 * 88 -  ln⁡0.041)}{ln⁡2} = 38.506$\\
+$S' = \dfrac{(\lambda S - \ln⁡ K)}{\ln⁡ 2} = \dfrac{(0.267 \times 88 -  \ln⁡ 0.041)}{\ln⁡ 2} = 38.506$\\
 
 $2^{S'} = 2^{38.506} = 390,300,663,957$
 
@@ -63,7 +63,7 @@ $E(S) = Kmne^{-λS} = \dfrac{mn}{2^{S'}}$\\
 \item Score: 88
 \end{itemize}
 
-$E(88) = Kmne^{-\lambda S} = \dfrac{41,667,927,126 \times 25}{2^{S'}} = 2.669$\\
+$E(88) = \dfrac{41,667,927,126 \times 25}{2^{38.506}} = 2.669$\\
 
 %
 % Exercise \thesection.2
@@ -77,7 +77,7 @@ $E(88) = Kmne^{-\lambda S} = \dfrac{41,667,927,126 \times 25}{2^{S'}} = 2.669$\\
 \item n: 100
 \end{itemize}
 
-Calculate exp(-1.28) as 0.28.
+Calculate $\exp(-1.28)$ as 0.28.
 
 \begin{enumerate}
 \item What is the e-value of the score 1? 
