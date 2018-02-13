@@ -1,0 +1,86 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage[font=small, labelfont=bf]{caption}
+%\usepackage[table,xcdraw]{xcolor}
+%
+%\begin{document}
+
+%
+% Evaluation of database search
+%
+\subsection{Evaluation of database search}
+BLAST reports bit scores and e-values as search result. Bit score are calculated from raw scores, and e-values represent the expected numbers of database hits.
+
+%
+% Example of BLAST output
+%
+\subsubsection*{Example of BLAST output} 
+\begin{itemize}
+\item q: HSBGPG Human gene for bone gla protein (BGP)
+\item d: osteocalcin [Felis catus]
+\item Sequence ID: XP\_003999760.1
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+\textbf{Score} & \textbf{Expect} & \textbf{Identities} & \textbf{Positives} & \textbf{Gaps} \\ \hline
+38.5 bits (88)  & 3.5             & 19/25 (76\%)         & 20/25 (80\%)        & 0/25 (0\%)    
+\end{tabular}
+\end{table}
+
+\begin{verbatim}
+      Query      677      TAFVSKQEGSEVVKRPRRYLYQWLG    751
+                           AFVSKQEGSEVV+R RRYL   LG	
+      Sbjct       36      AAFVSKQEGSEVVRRLRRYLAPGLG     60
+\end{verbatim}
+
+%
+% Karlin-Altschul statistics
+%
+\subsubsection*{Karlin-Altschul statistics} 
+\begin{itemize}
+\item $\lambda$ is a scalar parameter for score matrix 
+\item $K$ is a scalar parameter for search space size
+\end{itemize}
+
+BLAST pre-calculates both parameters in a search space independent manner.
+
+%
+% Example of Karlin-Altschul statistics
+%
+\subsubsection*{Example of Karlin-Altschul statistics} 
+\begin{itemize}
+\item Matrix: BLOSUM62
+\item Lambda: 0.267
+\item K: 0.041
+\end{itemize}
+
+%
+%  Sequence databases
+%
+\subsubsection*{Sequence databases} 
+The NCBI site provides several databases for BLAST search.
+\begin{itemize}
+\item Nucleotide collection (nr/nt)
+\item Non-redundant protein sequences (nr)
+\end{itemize}
+
+%
+%  Example of  database statitics
+%
+\subsubsection*{Example of  database statitics} 
+\begin{itemize}
+\item Database: nr
+\item Number of letters: 41,667,927,126
+\item Number of sequences: 113,671,629
+\end{itemize}
+
+\bigskip 
+
+%\end{document}
