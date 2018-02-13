@@ -31,7 +31,7 @@ The Gumbel distribution is a member of the extreme value distribution family. \\
 \noindent
 The cumulative distribution function (CDF) of the Gumbel distribution: \\
 
-$F_Y(y) = exp⁡[-e^{-\lambda(y-\mu)}]$ \\
+$F_Y(y) = \exp [-e^{-\lambda(y-\mu)}]$ \\
 
 \noindent
 Parameters
@@ -54,8 +54,8 @@ An extreme value distribution is a limiting distribution for the minimum or the 
 \begin{tabular}{lllllllll}
                        &                        & A                        & C                                                & G                                              & C                        & A                        & C                                                & G                                              \\ \cline{2-9} 
 \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{0}                         & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{0}                         \\ \cline{2-9} 
-\multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{\cellcolor[HTML]{FE0000}0.5} & \multicolumn{1}{l|}{0}                         & \multicolumn{1}{l|}{0.5} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{\cellcolor[HTML]{FE0000}0.5} & \multicolumn{1}{l|}{0}                         \\ \cline{2-9} 
-\multicolumn{1}{l|}{G} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{\cellcolor[HTML]{FE0000}1} & \multicolumn{1}{l|}{0.5} & \multicolumn{1}{l|}{0.2} & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{\cellcolor[HTML]{FE0000}1} \\ \cline{2-9} 
+\multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFCCC9}0.5} & \multicolumn{1}{l|}{0}                         & \multicolumn{1}{l|}{0.5} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFCCC9}0.5} & \multicolumn{1}{l|}{0}                         \\ \cline{2-9} 
+\multicolumn{1}{l|}{G} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0}   & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{\cellcolor[HTML]{FFCCC9}1} & \multicolumn{1}{l|}{0.5} & \multicolumn{1}{l|}{0.2} & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{\cellcolor[HTML]{FFCCC9}1} \\ \cline{2-9} 
 \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{0.5} & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{0.5}                       & \multicolumn{1}{l|}{0.7} & \multicolumn{1}{l|}{0.2} & \multicolumn{1}{l|}{0}                           & \multicolumn{1}{l|}{0.5}                       \\ \cline{2-9} 
 \end{tabular}
 \end{table}
@@ -63,8 +63,8 @@ An extreme value distribution is a limiting distribution for the minimum or the 
 \begin{table}[H]
 \centering
 \begin{tabular}{
->{\columncolor[HTML]{FE0000}}l |
->{\columncolor[HTML]{FE0000}}l |l|l|l|l|l}
+>{\columncolor[HTML]{FFCCC9}}l |
+>{\columncolor[HTML]{FFCCC9}}l |l|l|l|l|l}
 CG & CG & GC  &     & AC   &     &     \\
 CG & CG & GA  & ... & CG   & ... & ... \\ \hline
 1  & 1  & 0.2 &     & -0.6 &     &    
@@ -77,7 +77,7 @@ CG & CG & GA  & ... & CG   & ... & ... \\ \hline
 \subsubsection*{Parameter estimation}
 The p-value of the Gumbel distribution can be calculated as: \\
 
-$P[Y>y]=1-F_Y (y)=1-exp⁡[-e^{-\lambda(y-\mu)}]$ \\
+$P[Y>y]=1-F_Y (y)=1 - \exp [-e^{-\lambda(y-\mu)}]$ \\
 
 \noindent
 The parameters $\mu$ and $\lambda$ can be estimated from the arithmetic mean $m_{Y}$ and the variance $\sigma_{Y}^2$ of the observed sample. \\
