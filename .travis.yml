@@ -14,6 +14,7 @@ script:
 - pdflatex -output-directory ../_build ./04_Local_alignment.tex
 - pdflatex -output-directory ../_build ./05_Database_search.tex
 - pdflatex -output-directory ../_build ./06_Evaluation_of_alignment_scores.tex
+- pdflatex -output-directory ../_build ./07_Model_evaluation.tex
 - cd ..
 
 deploy:
