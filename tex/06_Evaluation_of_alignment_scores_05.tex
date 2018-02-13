@@ -1,0 +1,90 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage[font=small, labelfont=bf]{caption}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage{amsmath}
+%
+%\begin{document}
+
+%
+% Bit score and e-value
+%
+\subsection{Bit score and e-value}
+BLAST reports bit-scores and e-values that can be used for evaluation on search results.
+
+%
+% Bit score
+%
+\subsubsection*{Bit score} 
+Bit scores are normalized scores that have the same unit (bit). The scores can be comparable even when different scoring schemes are used. \\
+
+$S' = \dfrac{(\lambda S - ln⁡K)}{ln⁡2}$ \\
+
+\noindent
+$2^{S'}$ is the estimated number of alignments, and at least one alignment among them is estimated to have score S.
+
+%
+% Example of bit score calculation
+%
+\subsubsection*{Example of bit score calculation} 
+\begin{itemize}
+\item Lambda ($\lambda$): 0.267
+\item K: 0.041
+\item Score: 88
+\end{itemize}
+
+$S' = \dfrac{(\lambda S - ln⁡K)}{ln⁡2} = \dfrac{(0.267 * 88 -  ln⁡0.041)}{ln⁡2} = 38.506$\\
+
+$2^{S'} = 2^{38.506} = 390,300,663,957$
+
+%
+% E-value
+%
+\subsubsection*{E-value} 
+``The Expect value (E) is a parameter that describes the number of hits one can expect to see by chance when searching a database of a particular size'' \\ \\
+-- BLAST Frequently Asked questions (\href{http://blast.ncbi.nlm.nih.gov}{http://blast.ncbi.nlm.nih.gov}) \\
+
+$E(S) = Kmne^{-λS} = \dfrac{mn}{2^{S'}}$\\
+
+%
+% Example of E-value calculation
+%
+\subsubsection*{Example of E-value calculation} 
+\begin{itemize}
+\item n: 25
+\item m: 41,667,927,126
+\item Lambda ($\lambda$): 0.267
+\item K: 0.041
+\item Score: 88
+\end{itemize}
+
+$E(88) = Kmne^{-\lambda S} = \dfrac{41,667,927,126 \times 25}{2^{S'}} = 2.669$\\
+
+%
+% Exercise \thesection.2
+%
+\subsubsection*{Exercise \thesection.2}
+
+\begin{itemize}
+\item $\lambda$: 1.28
+\item K: 0.5
+\item m: 1000
+\item n: 100
+\end{itemize}
+
+Calculate exp(-1.28) as 0.28.
+
+\begin{enumerate}
+\item What is the e-value of the score 1? 
+\bigskip 
+\item Is the alignment with score 1 likely homologous?
+\end{enumerate}
+
+\bigskip 
+
+%\end{document}
