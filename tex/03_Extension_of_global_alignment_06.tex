@@ -67,8 +67,8 @@ The edit distance constitutes a metric space.
 \begin{itemize}
 \item $d_{xy} = 0$ for $x = y$ 
 \item $d_{xy} > 0$ for $x \neq y$
-\item $dxy = dyx$
-\item $dxy \leq dxz + dzy$ for any $z$ (the triangle inequality)
+\item $d_{xy} = d_{yx}$
+\item $d_{xy} \leq d_{xz} + d_{zy}$ for any $z$ (the triangle inequality)
 \end{itemize}
 
 %
@@ -104,7 +104,7 @@ $D = d / $(length of the longest sequence)
 The distance can be adjusted. Below is a simple correction approach for protein sequences.
 
 \bigskip 
-$K=-ln⁡(1-D-1/5 D^2 )$
+$K=-\ln⁡(1-D-1/5 D^2 )$
 \begin{figure}[H]
   \centering
       \includegraphics[width=0.3\textwidth]{fig03/adjust_distance.png}
@@ -117,7 +117,7 @@ $K=-ln⁡(1-D-1/5 D^2 )$
 
 $D = 0.5$
 
-$K = -ln⁡(1 - 0.5 - 1/5  \times 0.25 ) = -ln(0.45) \approx 0.8⁡$
+$K = -\ln⁡(1 - 0.5 - 1/5  \times 0.25 ) = -\ln(0.45) \approx 0.8⁡$
 
 %\end{document}
 
