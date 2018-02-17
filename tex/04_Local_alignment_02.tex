@@ -44,7 +44,7 @@ Dynamic programming can be used to find local alignments.
 H_{i,j}^{(0)} &= H_{i-1,j} - g &(vertical) \\
 H_{i,j}^{(1)} &= H_{i,j-1} - g	&(horizontal) \\
 H_{i,j}^{(2)} &= H_{i-1,j-1} + R_{a,b} &(diagonal) \\
-H_{i,j}^{(2)} &= 0 &(minimum score)
+H_{i,j}^{(2)} &= 0 &(minimum \, score)
 \end{align*}
 
 %
@@ -68,7 +68,7 @@ H_{i,j}^{(2)} &= 0 &(minimum score)
 H_{i,j}^{(0)} &=  -0.1 &\hfill &(vertical) \\
 H_{i,j}^{(1)} &= -0.3 &\hfill &(horizontal) \\
 H_{i,j}^{(2)} &= -0.2 &\hfill &(diagonal) \\
-H_{i,j}^{(2)} &= 0 & \checkmark &(minimum score)
+H_{i,j}^{(2)} &= 0 & \checkmark &(minimum \, score)
 \end{align*}
 \medskip 
 
