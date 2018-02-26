@@ -1,0 +1,63 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Tree reconstruction methods
+%
+\subsection{Tree reconstruction methods}
+A number of methods have been proposed to reconstruct a phylogenetic tree.
+
+%
+% Two types of reconstruction methods
+%
+\subsubsection*{Two types of reconstruction methods}
+\begin{itemize}
+\item Distance-based methods
+\item Character-based methods
+\end{itemize}
+
+%
+% Distance-based methods
+%
+\subsubsection*{Distance-based methods}
+A distance is a positive value with larger values indicating that two sequences are separated further. 
+
+\begin{itemize}
+\item PGMA (pair-group method using arithmetic mean)
+\item Neighbor-joining  (NJ)
+\end{itemize}
+
+%
+% Character-based methods
+%
+\subsubsection*{Character-based methods}
+Character based methods rely on characters (amino acid/nucleotide letters) to reconstruct a tree.
+
+\begin{itemize}
+\item Maximum parsimony
+\item Maximum likelihood
+\end{itemize}
+
+% Evaluation of reconstructed tree
+%
+\subsubsection*{Evaluation of reconstructed trees}
+Bootstrapping is one of the methods to test the robustness of a reconstruct tree by adding noises and comparing the results.
+\begin{enumerate}
+\item Randomly generate a pseudo MAS from the original MSA
+\item Reconstruct a tree
+\item Repeat the process
+\item Compare the trees
+\end{enumerate}
+
+\bigskip 
+
+%\end{document}

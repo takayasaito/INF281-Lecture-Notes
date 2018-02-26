@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{63}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Phylogenetic tree
+%
+\setcounter{section}{8}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Phylogenetic tree}
+\input{09_Phylogenetic_tree_01.tex}
+\input{09_Phylogenetic_tree_02.tex}
+\input{09_Phylogenetic_tree_03.tex}
+%\input{09_Phylogenetic_tree_04.tex}
+
+\end{document}
