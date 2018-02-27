@@ -110,7 +110,7 @@ $s_1^3$ & $s_2^3$ & $s_3^3$ & - & $s_5^3$ & - & -
 One of the common methods to calculate the score of an alignment is using SP (sum-of-pairs) scores. SP uses pair-wise scores on all possible paired sequences to obtain the final score for the alignment. SP is defined as below.
 
 \[
-S(\mathcal{A}) = \sum_{i=0}^{m-1} \sum_{j=i+1}^{m} S(\bar{s}^i, \bar{s}^j)
+S(\mathcal{A}) = \sum_{i=1}^{m-1} \sum_{j=i+1}^{m} S(\bar{s}^i, \bar{s}^j)
 \]
 
 \textbf{N.B.} The score of $S(\bar{s}^i, \bar{s}^j)$ is 0 when both elements are gaps.
