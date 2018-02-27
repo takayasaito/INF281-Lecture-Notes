@@ -16,6 +16,7 @@ script:
 - pdflatex -output-directory ../_build ./06_Evaluation_of_alignment_scores.tex
 - pdflatex -output-directory ../_build ./07_Model_evaluation.tex
 - pdflatex -output-directory ../_build ./08_Multiple_sequence_alignment.tex
+- pdflatex -output-directory ../_build ./09_Phylogenetic_tree.tex
 - cd ..
 
 deploy:
