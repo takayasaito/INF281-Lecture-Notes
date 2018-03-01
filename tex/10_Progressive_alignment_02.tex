@@ -53,7 +53,7 @@ Alignment clustering can be used even when accurate phylogenic trees are not ava
 
 \begin{algorithm}[H]
   \SetKwInOut{U}{$\mathrm{U}$}
-  \SetKwInOut{A}{$\mathrm{A}$}
+  \SetKwInOut{A}{$\mathcal{A}$}
   \SetKwData{dRAB}{$\mathrm{R_{a,b}}$}
   \SetKwData{dG}{$\mathrm{g}$}
   
@@ -67,14 +67,14 @@ Alignment clustering can be used even when accurate phylogenic trees are not ava
    $\mathrm{U} \leftarrow \{s_1, s_2, ... s_n\}$;\\
    Choose two sequences s and t from U;\\
    $\mathrm{U} \leftarrow \mathrm{U} - \{s, t\}$;\\
-   $\mathrm{A} \leftarrow Align(s, t)$;
+   $\mathcal{A} \leftarrow Align(s, t)$;
 
   \BlankLine \BlankLine
 
   \For{$i \leftarrow 1$ \KwTo $n-2$}{
       Choose a sequence s from U;\\
       $\mathrm{U} \leftarrow \mathrm{U} - \{s\}$;\\
-      $\mathrm{A} \leftarrow Align(\mathrm{A}, s)$;
+      $\mathcal{A} \leftarrow Align(\mathcal{A}, s)$;
   }
 
   \SetAlgoRefName{\thesection.1}
@@ -101,7 +101,7 @@ It requires the pair-wise alignment scores of all possible combinations.
 It requires the pair-wise alignment scores of all possible combinations. \\
 
 \noindent
-Decide two alignments from the three alignments, $\mathrm{A}^1 = \{s^1\}, \mathrm{A}^2 = \{s^2\}$, and $\mathrm{A}^3 = \{s^3, s^4\}$, for clustering.\\
+Decide two alignments from the three alignments, $\mathcal{A}^1 = \{s^1\}, \mathcal{A}^2 = \{s^2\}$, and $\mathcal{A}^3 = \{s^3, s^4\}$, for clustering.\\
 
 Pair-wise scores
 
@@ -127,17 +127,17 @@ Linkage selection
 \begin{table}[H]
 \centering
 \begin{tabular}{lll}
-Average linkage & $S(\mathrm{A}_1,\mathrm{A}_2) = 7$               & \checkmark  \\
-                & $S(\mathrm{A}_1,\mathrm{A}_3) = (5+3)/2 = 4$       &   \\
-                & $S(\mathrm{A}_2,\mathrm{A}_3) = (4+8)/2 = 6$       &   \\
+Average linkage & $S(\mathcal{A}_1,\mathcal{A}_2) = 7$               & \checkmark  \\
+                & $S(\mathcal{A}_1,\mathcal{A}_3) = (5+3)/2 = 4$       &   \\
+                & $S(\mathcal{A}_2,\mathcal{A}_3) = (4+8)/2 = 6$       &   \\
                 &                                                            &   \\
-Maximum linkage & $S(\mathrm{A}_1, \mathrm{A}_2) = 7$               &   \\
-                & $S(\mathrm{A}_1, \mathrm{A}_3) = \max(5, 3) = 5$ &   \\
-                & $S(\mathrm{A}_2, \mathrm{A}_3) = \max(4, 8) = 8$   & \checkmark \\
+Maximum linkage & $S(\mathcal{A}_1, \mathcal{A}_2) = 7$               &   \\
+                & $S(\mathcal{A}_1, \mathcal{A}_3) = \max(5, 3) = 5$ &   \\
+                & $S(\mathcal{A}_2, \mathcal{A}_3) = \max(4, 8) = 8$   & \checkmark \\
                 &                                                            &   \\
-Minimum linkage & $S(\mathrm{A}_1, \mathrm{A}_2) = 7$               & \checkmark \\
-                & $S(\mathrm{A}_1, \mathrm{A}_3 ) = \min(5, 3) = 3$ &   \\
-                & $S(\mathrm{A}_2, \mathrm{A}_3) = \min(4, 8) = 4$   &  
+Minimum linkage & $S(\mathcal{A}_1, \mathcal{A}_2) = 7$               & \checkmark \\
+                & $S(\mathcal{A}_1, \mathcal{A}_3 ) = \min(5, 3) = 3$ &   \\
+                & $S(\mathcal{A}_2, \mathcal{A}_3) = \min(4, 8) = 4$   &  
 \end{tabular}
 \end{table}
 
@@ -145,7 +145,7 @@ Minimum linkage & $S(\mathrm{A}_1, \mathrm{A}_2) = 7$               & \checkmark
 % Exercise \thesection.1
 %
 \subsubsection*{Exercise \thesection.1}
-Select two alignments from the three alignments - $A^1 = \{s^1\}$, $A^2 = \{s^2\}$, and $A^3 = \{s^3, s^4\}$ for clustering.
+Select two alignments from the three alignments: $\mathcal{A}^1 = \{s^1\}$, $\mathcal{A}^2 = \{s^2\}$, and $\mathcal{A}^3 = \{s^3, s^4\}$ for clustering.
 
 \begin{table}[H]
 \centering
