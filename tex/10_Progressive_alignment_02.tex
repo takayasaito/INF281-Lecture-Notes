@@ -1,0 +1,174 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage[ruled]{algorithm2e}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Alignment clustering
+%
+\subsection{Alignment clustering}
+Alignment clustering can be used even when accurate phylogenic trees are not available. 
+
+%
+% Clustering methods
+%
+\subsubsection*{Clustering methods}
+\begin{itemize}
+\item Linear clustering
+\item Linkage clustering
+\end{itemize}
+
+%
+% Linear clustering
+%
+\subsubsection*{Linear clustering}
+\begin{enumerate}
+\item Start with an alignment with a single sequence
+\item Add a single sequence to the alignment
+\item Repeat until no sequence is left
+\end{enumerate}
+
+%
+% Selection of the next sequence
+%
+\subsubsection*{Selection of the next sequence}
+\begin{itemize}
+\item Most similar to the one already in the alignment
+\item Most similar to the average sequence in the alignment
+\end{itemize}
+
+%
+% Pseudo-code of linear progressive alignment (general progressive alignment)
+%
+\subsubsection*{Pseudo-code of linear progressive alignment (general progressive alignment)}
+
+\begin{algorithm}[H]
+  \SetKwInOut{U}{$\mathrm{U}$}
+  \SetKwInOut{A}{$\mathcal{A}$}
+  \SetKwData{dRAB}{$\mathrm{R_{a,b}}$}
+  \SetKwData{dG}{$\mathrm{g}$}
+  
+  \BlankLine
+    
+  \U{Set of sequences not aligned}
+  \A{Current alignment}
+  
+  \BlankLine \BlankLine
+  
+   $\mathrm{U} \leftarrow \{s_1, s_2, ... s_n\}$;\\
+   Choose two sequences s and t from U;\\
+   $\mathrm{U} \leftarrow \mathrm{U} - \{s, t\}$;\\
+   $\mathcal{A} \leftarrow Align(s, t)$;
+
+  \BlankLine \BlankLine
+
+  \For{$i \leftarrow 1$ \KwTo $n-2$}{
+      Choose a sequence s from U;\\
+      $\mathrm{U} \leftarrow \mathrm{U} - \{s\}$;\\
+      $\mathcal{A} \leftarrow Align(\mathcal{A}, s)$;
+  }
+
+  \SetAlgoRefName{\thesection.1}
+  \caption{General progressive alignment}
+
+\end{algorithm}
+
+%
+% Linkage methods
+%
+\subsubsection*{Linkage methods}
+It requires the pair-wise alignment scores of all possible combinations. 
+
+\begin{itemize}
+\item Average linkage
+\item Maximum linkage
+\item Minimum linkage
+\end{itemize}
+
+%
+% Example of linkage methods
+%
+\subsubsection*{Example of linkage methods}
+It requires the pair-wise alignment scores of all possible combinations. \\
+
+\noindent
+Decide two alignments from the three alignments, $\mathcal{A}^1 = \{s^1\}, \mathcal{A}^2 = \{s^2\}$, and $\mathcal{A}^3 = \{s^3, s^4\}$, for clustering.\\
+
+Pair-wise scores
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+   & s1 & s2 & s3 & s4 \\ \hline
+s1 & 0  & 7  & 5  & 3  \\ \hline
+s2 &    & 0  & 4  & 8  \\ \hline
+s3 &    &    & 0  & 2  \\ \hline
+s4 &    &    &    & 0  \\ \hline
+\end{tabular}
+\end{table}
+
+%
+% NEWPAGE
+%
+\newpage
+
+Linkage selection
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+Average linkage & $S(\mathcal{A}_1,\mathcal{A}_2) = 7$               & \checkmark  \\
+                & $S(\mathcal{A}_1,\mathcal{A}_3) = (5+3)/2 = 4$       &   \\
+                & $S(\mathcal{A}_2,\mathcal{A}_3) = (4+8)/2 = 6$       &   \\
+                &                                                            &   \\
+Maximum linkage & $S(\mathcal{A}_1, \mathcal{A}_2) = 7$               &   \\
+                & $S(\mathcal{A}_1, \mathcal{A}_3) = \max(5, 3) = 5$ &   \\
+                & $S(\mathcal{A}_2, \mathcal{A}_3) = \max(4, 8) = 8$   & \checkmark \\
+                &                                                            &   \\
+Minimum linkage & $S(\mathcal{A}_1, \mathcal{A}_2) = 7$               & \checkmark \\
+                & $S(\mathcal{A}_1, \mathcal{A}_3 ) = \min(5, 3) = 3$ &   \\
+                & $S(\mathcal{A}_2, \mathcal{A}_3) = \min(4, 8) = 4$   &  
+\end{tabular}
+\end{table}
+
+%
+% Exercise \thesection.1
+%
+\subsubsection*{Exercise \thesection.1}
+Select two alignments from the three alignments: $\mathcal{A}^1 = \{s^1\}$, $\mathcal{A}^2 = \{s^2\}$, and $\mathcal{A}^3 = \{s^3, s^4\}$ for clustering.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+   & s1 & s2 & s3 & s4 \\ \hline
+s1 & 0  & 2  & 2  & 5  \\ \hline
+s2 &    & 0  & 4  & 5  \\ \hline
+s3 &    &    & 0  & 1  \\ \hline
+s4 &    &    &    & 0  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item Use the average linkage.
+\bigskip 
+
+\item Use the maximum linkage.
+\bigskip 
+
+\item Use the minimum linkage.
+\end{enumerate}
+
+\bigskip 
+
+%\end{document}
