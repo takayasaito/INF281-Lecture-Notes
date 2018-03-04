@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{73}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Progressive alignment
+%
+\setcounter{section}{9}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Progressive alignment}
+\input{10_Progressive_alignment_01.tex}
+\input{10_Progressive_alignment_02.tex}
+\input{10_Progressive_alignment_03.tex}
+\input{10_Progressive_alignment_04.tex}
+
+\end{document}
