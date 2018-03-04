@@ -1,0 +1,178 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage{colortbl}
+%\definecolor{lightgray}{RGB}{211, 211, 211}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% PAM – substitution matrix
+%
+\subsection{PAM – substitution matrix}
+PAM is based on a substitution matrix created from experimental data.
+
+%
+% Relative mutability
+%
+\subsubsection*{Relative mutability}
+The probabilities of amino acid mutations are calculated based on relative mutability. \\
+
+$m_a : \dfrac{1}{100p_a} \times \dfrac{f_a}{f}$
+
+%
+% Example of relative mutability calculation
+%
+\subsubsection*{Example of relative mutability calculation}
+
+\begin{itemize}
+
+\item Frequencies of estimated mutations
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$f_A$: & 2  & $f_G$: & 2 & $f_C$: & 4 & $f_T$: & 2  \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$f:$ & 10 &   &   &  &   &  &   \\ \hline
+\end{tabular}
+\end{table}
+
+\item Background frequencies
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$p_A$: & 3/12  & $p_G$: & 4/12 & $p_C$: & 2/12 & $p_T$: & 3/12 \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$100p_A$: & 23  & $100p_G$:  & 33.33  & $100p_C$:  & 16.67 & $100p_T$: & 25   \\ \hline
+\end{tabular}
+\end{table}
+
+\item Relative mutability (1 PAM)
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$m_A$: & 0.008  & $m_G$: & 0.006 & $m_C$: & 0.024 & $m_T$: & 0.008 \\ \hline
+\end{tabular}
+\end{table}
+
+\end{itemize}
+
+%
+% Mutation probability
+%
+\subsubsection*{Mutation probability}
+Mutation probabilities are summarized in a matrix format called substitution matrix.
+
+\[
+M_{ab} : m_{a} \times \dfrac{f_{ab}}{f_a} \quad M_{aa} : 1 - m_{a}
+\]
+
+%
+% Example of substitution matrix
+%
+\subsubsection*{Example of substitution matrix}
+\begin{itemize}
+\item Frequencies of estimated mutations
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$f_{AC}$: & 1  & $f_{AT}$: & 1 & $f_{GC}$: & 2 & $f_{CT}$: & 1  \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$f_{CA}$: & 1  & $f_{TA}$: & 1 & $f_{CG}$: & 2 & $f_{TC}$: & 1  \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$f_{A}$: & 2  & $f_{G}$: & 2 & $f_{C}$: & 4 & $f_{T}$: & 2 \\ \hline
+\end{tabular}
+\end{table}
+
+\item Relative mutability (1 PAM)
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$m_{A}$: & 0.008  & $m_{G}$: & 0.006 & $m_{C}$: & 0.024 & $m_{T}$: & 0.008 \\ \hline
+\end{tabular}
+\end{table}
+
+\item Mutation probabilities
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|rl|rl|rl|rl|}
+\hline
+$m_{AC}$: & 0.004  & $m_{AT}$: & 0.004 &  &  &  &  \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$m_{GC}$: & 0.006  & &  & &  &  &   \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$m_{CA}$: & 0.006  & $m_{GC}$: & 0.012 & $m_{CT}$: & 0.006 &  &  \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$m_{TA}$: & 0.004  & $m_{TC}$: & 0.004 &  &  &  &   \\ \arrayrulecolor{lightgray} \hline \arrayrulecolor{black} 
+$m_{AA}$: & 0.992  & $m_{GC}$: & 0.994 & $m_{CC}$: & 0.976 & $m_{TT}$: & 0.992 \\ \hline
+\end{tabular}
+\end{table}
+
+\item Substitution matrix
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|llll}
+  & A     & G     & C     & T     \\ \hline
+A & 0.992 &       & 0.004 & 0.004 \\
+G &       & 0.994 & 0.006 &       \\
+C & 0.006 & 0.012 & 0.976 & 0.006 \\
+T & 0.004 &       & 0.004 & 0.992
+\end{tabular}
+\end{table}
+
+\end{itemize}
+
+%
+% Matrices for general evolutionary time
+%
+\subsubsection*{Matrices for general evolutionary time}
+Markov chains can be used to generalize PAM with arbitrary τ values. For instance, the substitution value for 2 PAM (τ=2) for amino acids a to b can be calculated as:
+
+\[
+M_{ab}^2 = M_{ab} M_{bb} + M_{aa} M_{ab} + \sum_{c \notin \{a, b\}}{} M_{ac} M_{cb} = \sum_{c \in M}{} M_{ac} M_{cb}
+\]
+
+%
+% Odds matrix
+%
+\subsubsection*{Odds matrix}
+Substitution scores can be transformed to odds values. Odds values $O_{ab}$ are equal to $O_{ba}$, and therefore an odds matrix is symmetrical.
+
+\[
+O_{ab} = \dfrac{M_{ab}}{p_b}
+\]
+
+when $a \neq b$:
+
+\[
+O_{ab} 
+= \dfrac{M_{ab}}{p_b} 
+= m_a \times \dfrac{f_{ab}}{f_a} \times \dfrac{1}{p_b} 
+= \dfrac{1}{100p_a} \times \dfrac{f_{a}}{f}  \times \dfrac{f_{ab}}{f_a} \times \dfrac{1}{p_b} 
+= \dfrac{f_{ab}}{100fp_ap_b}
+\]
+
+%
+% Transformation of an odds matrix to a score matrix
+%
+\subsubsection*{Transformation of an odds matrix to a score matrix}
+Odds values can be further transformed to log-odds values.
+
+\[
+R_{ab} = \log O_{ab} = \log \dfrac{M_{ab}}{p_b}
+\]
+
+\bigskip 
+
+%\end{document}
