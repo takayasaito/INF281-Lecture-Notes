@@ -1,0 +1,61 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage[ruled]{algorithm2e}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% PSI-BLAST
+%
+\subsection{PSI-BLAST}
+Position-specific iterated BLAST  (PSI-BLAST) is an extension of BLAST. It is much more sensitive than BLAST. It can be used to find distantly related proteins.
+
+var
+q: query sequence
+t: threshold for significance
+
+%
+% Simplified procedure of PSI-BLAST
+%
+\subsubsection*{Pseudo-code of linear progressive alignment (general progressive alignment)}
+
+\begin{algorithm}[H]
+  \SetKwInOut{Q}{$\mathrm{q}$}
+  \SetKwInOut{T}{$\mathrm{t}$}
+  \SetKwRepeat{Do}{do}{while}
+  
+  \BlankLine
+    
+  \Q{query sequence}
+  \T{threshold for significance}
+  
+  \BlankLine \BlankLine
+  
+   Q = BLAST(q, t);
+
+  \BlankLine \BlankLine
+
+  \Do{\textsf{\upshape convergence(Reduce(Q) = Q1) or maximum number of cycles}}{
+     Q1 = Reduce(Q);               \tcp*{Remove identical segments}
+     M  = MultipleAlignment(Q1); \\
+     P  = Profile(M); \\
+     Q  = ProfileSearch(P);
+  }
+
+  \BlankLine   \BlankLine
+  
+  \SetAlgoRefName{\thesection.1}
+  \caption{Simplified procedure of PSI-BLAST}
+
+\end{algorithm}
+
+\bigskip 
+
+%\end{document}
