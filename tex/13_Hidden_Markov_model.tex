@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{94}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Hidden Markov model
+%
+\setcounter{section}{12}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Hidden Markov model}
+\input{13_Hidden_Markov_model_01.tex}
+\input{13_Hidden_Markov_model_02.tex}
+\input{13_Hidden_Markov_model_03.tex}
+
+\end{document}
