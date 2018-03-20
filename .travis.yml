@@ -20,6 +20,7 @@ script:
 - pdflatex -output-directory ../_build ./10_Progressing_alignment.tex
 - pdflatex -output-directory ../_build ./11_Construction_of_scoring_matrix.tex
 - pdflatex -output-directory ../_build ./12_Sequence_profiles.tex
+- pdflatex -output-directory ../_build ./13_Hidden_Markov_model.tex
 - cd ..
 
 deploy:
