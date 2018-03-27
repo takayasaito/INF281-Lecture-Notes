@@ -1,0 +1,67 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Sequence patterns 
+%
+\subsection{Sequence patterns}
+A sequence pattern can be used to find protein family members. The concept of finding patterns is similar to creating regular expressions.
+
+%
+% The PROSITE language
+%
+\subsubsection*{The PROSITE language}
+\begin{itemize}
+\item x: An arbitrary amino acid
+\item -: Separating elements
+\item \verb|[]|: A list of amino acids
+\item \{\}: A list of not accepted amino acids
+\item (): A range of en element
+\end{itemize}
+
+%
+% Example of PROSITE
+%
+\subsubsection*{Example of PROSITE}
+Find all matched sequences for the patterns. Assume the alphabet \verb|M = {A, G, C, T}|. \\
+
+\noindent
+Pattern 1: \verb|A - [GC] - {AGC}|
+\begin{verbatim}
+   AGT
+   ACT
+\end{verbatim}
+
+\noindent
+Pattern 2: \verb|A - x(1,3) - G|
+\begin{verbatim}
+   AxG
+   AxxG
+   AxxxG
+\end{verbatim}
+
+%
+% Exercise \thesection.1
+%
+\subsubsection*{Exercise \thesection.1}
+Find all matched sequences for the pattern. Assume the alphabet \verb|M = {A, G, C, T}|. \\
+
+\noindent
+Pattern: \verb|[AC] - {GCT} - x(1, 2) - T|
+
+\bigskip 
+
+\bigskip 
+
+\bigskip 
+
+%\end{document}
