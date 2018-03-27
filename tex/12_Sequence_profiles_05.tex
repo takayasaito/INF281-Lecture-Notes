@@ -17,10 +17,6 @@
 \subsection{PSI-BLAST}
 Position-specific iterated BLAST  (PSI-BLAST) is an extension of BLAST. It is much more sensitive than BLAST. It can be used to find distantly related proteins.
 
-var
-q: query sequence
-t: threshold for significance
-
 %
 % Simplified procedure of PSI-BLAST
 %
@@ -43,7 +39,7 @@ t: threshold for significance
   \BlankLine \BlankLine
 
   \Do{\textsf{\upshape convergence(Reduce(Q) = Q1) or maximum number of cycles}}{
-     Q1 = Reduce(Q);               \tcp*{Remove identical segments}
+     Q1 = Reduce(Q)               \tcp*{Remove identical segments}
      M  = MultipleAlignment(Q1); \\
      P  = Profile(M); \\
      Q  = ProfileSearch(P);

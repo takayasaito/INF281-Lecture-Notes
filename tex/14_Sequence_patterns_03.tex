@@ -1,0 +1,115 @@
+%\documentclass[12pt]{article}
+%\usepackage[a4paper, margin=1in]{geometry} 
+%\usepackage{graphicx} 
+%\usepackage{hyperref}
+%\usepackage{float}
+%\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{amsmath}
+%\usepackage[font=small, labelfont=bf]{caption}
+%
+%\begin{document}
+
+%
+% Pattern discovery 
+%
+\subsection{Pattern discovery}
+Sequence patterns can be created from MSAs.
+
+%
+% Pattern discovery methods
+%
+\subsubsection*{Pattern discovery methods}
+\begin{itemize}
+\item Comparison-based methods
+\item Pattern-driven methods
+\end{itemize}
+
+%
+% Pivot-based methods
+%
+\subsubsection*{Pivot-based methods}
+The pivot-based method is one of the comparison-based methods.  One sequence is used as pivot, and all the rest of the sequences are compared with this pivot to find similar segments.
+
+%
+% Example of pivot-based methods
+%
+\subsubsection*{Example of pivot-based methods}
+Find similar segments of size 3 with one edit distance without insertion/deletion for the following sequences. The first sequence should be used as pivot.
+
+\begin{verbatim}
+  Seq1 GATC
+  Seq2 GGACCG
+  Seq3 GAG
+  Seq4 GGGT
+\end{verbatim}
+
+\noindent
+Select segments for GAT.
+\begin{verbatim}
+  Seq2 GAC
+  Seq3 GAG
+  Seq4 GGT
+\end{verbatim}
+
+\noindent
+Construct a pattern for the segment of GAT.
+\begin{verbatim}
+  G - [AG] - [CGT]
+\end{verbatim}
+
+\noindent
+Select segments for ATC.
+\begin{verbatim}
+  Seq2 ACC
+\end{verbatim}
+
+\noindent
+Construct a pattern for the segment of ATC.
+\begin{verbatim}
+  A - [TC] - C
+\end{verbatim}
+
+%
+% Pratt
+%
+\subsubsection*{Pratt}
+Pratt is one of the pattern-driven methods. 
+
+$\mathrm{C_1 
+-  x(i1, j1) 
+-  C_2 
+- x(i2, j2) 
+-   \cdot\cdot\cdot 
+-  C_{p-1} 
+-   x(i_{p - 1}, j_{p -1})
+-   C_p}$
+
+%
+% Example of Pratt
+%
+\subsubsection*{Example of Pratt}
+Find a matched pattern for the following three sequences.
+\begin{verbatim}
+  Seq1 ACTG
+  Seq2 ACGT
+  Seq3 ACT
+\end{verbatim}
+
+$\mathrm{A - x(0,0) - C - x(0,2)}$
+
+%
+% Pratt procedure
+%
+\subsubsection*{Pratt procedure}
+Pratt uses the following three main steps to find the best matched pattern.
+
+\begin{itemize}
+\item Preprocessing
+\item Searching
+\item Specialization
+\end{itemize}
+
+\bigskip 
+
+%\end{document}

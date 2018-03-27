@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry} 
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[ruled]{algorithm2e}
+\usepackage{amssymb}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage[table,xcdraw]{xcolor}
+
+\title{Lecture Notes for \\ INF281 Basics of Bioinformatics Sequence Analysis}
+\author{Takaya Saito}
+\date{}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{98}
+
+\makeatletter 
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\makeatother
+
+%
+% Sequence patterns
+%
+\setcounter{section}{13}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\section{Sequence patterns}
+\input{14_Sequence_patterns_01.tex}
+\input{14_Sequence_patterns_02.tex}
+\input{14_Sequence_patterns_03.tex}
+
+\end{document}
